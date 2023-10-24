@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes as R, Navigate } from 'react-rou
 import RegisterPage from '../src/components/RegisterPage';
 import LoginPage from '../src/components/LoginPage';  
 import ResetPasswordPage from '../src/components/ResetPasswordPage';
+import DashboardPage from './components/DashBoardPage';
 
 const RoutesComponent: React.FC = () => {
     return (
@@ -12,6 +13,7 @@ const RoutesComponent: React.FC = () => {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/reset-password" element={<ResetPasswordPage />} /> 
           <Route path="/" element={<Navigate to="/register" replace />} />  
+          <Route path="/dashboard/*" element={<DashboardPage />} />
 
         </R>
       </Router>
